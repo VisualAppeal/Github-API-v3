@@ -8,7 +8,7 @@ class GithubOrgTeams extends Github {
 	const PERMISSION_PUSH = 'push';
 	const PERMISSION_ADMIN = 'admin';
 	
-	/*
+	/**
 	 * List teams
 	 *
 	 * @param string $organization
@@ -17,7 +17,7 @@ class GithubOrgTeams extends Github {
 		return $this->request('/orgs/'.$organization.'/teams');
 	}
 	
-	/*
+	/**
 	 * Get team
 	 *
 	 * @param int $id Team ID
@@ -26,7 +26,7 @@ class GithubOrgTeams extends Github {
 		return $this->request('/teams/'.$id);
 	}
 	
-	/*
+	/**
 	 * Create team
 	 *
 	 * @param string $organization
@@ -42,7 +42,7 @@ class GithubOrgTeams extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Edit team
 	 *
 	 * @param int $id Team ID
@@ -56,7 +56,7 @@ class GithubOrgTeams extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Delete team
 	 *
 	 * @param int $id Team ID
@@ -65,7 +65,7 @@ class GithubOrgTeams extends Github {
 		return ($this->request('/teams/'.$id, 'DELETE', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * List team members
 	 *
 	 * @param int $id Team ID
@@ -74,7 +74,7 @@ class GithubOrgTeams extends Github {
 		return $this->request('/teams/'.$id.'/members');
 	}
 	
-	/*
+	/**
 	 * Check if the user is a team member
 	 *
 	 * @param int $id Team ID
@@ -84,7 +84,7 @@ class GithubOrgTeams extends Github {
 		return ($this->request('/teams/'.$id.'/members/'.$username, 'GET', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Add team member
 	 *
 	 * @param int $id Team ID
@@ -94,7 +94,7 @@ class GithubOrgTeams extends Github {
 		return ($this->request('/teams/'.$id.'/members/'.$username, 'PUT', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Remove team member
 	 *
 	 * @param int $id Team ID
@@ -104,7 +104,7 @@ class GithubOrgTeams extends Github {
 		return ($this->request('/teams/'.$id.'/members/'.$username, 'DELETE', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * List team repos
 	 *
 	 * @param int $id Team ID
@@ -113,7 +113,7 @@ class GithubOrgTeams extends Github {
 		return $this->request('/teams/'.$id.'/repos');
 	}
 	
-	/*
+	/**
 	 * Is team repo
 	 *
 	 * @param int $id Team ID
@@ -124,7 +124,7 @@ class GithubOrgTeams extends Github {
 		return ($this->request('/teams/'.$id.'/repos/'.$username.'/'.$repository, 'GET', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Add team repo
 	 *
 	 * @param int $id Team ID
@@ -135,7 +135,7 @@ class GithubOrgTeams extends Github {
 		return ($this->request('/teams/'.$id.'/repos/'.$username.'/'.$repository, 'PUT', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Remove team repo
 	 *
 	 * @param int $id Team ID

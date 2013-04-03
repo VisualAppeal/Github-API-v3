@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubIssueEvents extends Github {
 	
-	/*
+	/**
 	 * List events for a repository
 	 *
 	 * @param string $username
@@ -14,7 +14,7 @@ class GithubIssueEvents extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/events');
 	}
 	
-	/*
+	/**
 	 * List events for an issue
 	 *
 	 * @param string $username
@@ -25,7 +25,7 @@ class GithubIssueEvents extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/events');
 	}
 	
-	/*
+	/**
 	 * Get a single event
 	 *
 	 * @param string $username

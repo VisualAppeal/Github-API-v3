@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubIssueLabels extends Github {
 	
-	/*
+	/**
 	 * List all labels for a repository
 	 *
 	 * @param string $username
@@ -14,7 +14,7 @@ class GithubIssueLabels extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/labels');
 	}
 	
-	/*
+	/**
 	 * List labels on an issue
 	 *
 	 * @param string $username
@@ -25,7 +25,7 @@ class GithubIssueLabels extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/labels');
 	}
 	
-	/*
+	/**
 	 * Get a single label
 	 *
 	 * @param string $username
@@ -36,7 +36,7 @@ class GithubIssueLabels extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/labels/'.$name);
 	}
 	
-	/*
+	/**
 	 * Create a label
 	 *
 	 * @param string $username
@@ -51,7 +51,7 @@ class GithubIssueLabels extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Update a label
 	 *
 	 * @param string $username
@@ -66,7 +66,7 @@ class GithubIssueLabels extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Delete a label
 	 *
 	 * @param string $username
@@ -77,7 +77,7 @@ class GithubIssueLabels extends Github {
 		return ($this->request('/repos/'.$username.'/'.$repository.'/labels/'.$name, 'DELETE', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Add labels to an issue
 	 *
 	 * @param string $username
@@ -89,7 +89,7 @@ class GithubIssueLabels extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/labels', 'POST', $labels);
 	}
 	
-	/*
+	/**
 	 * Remove a label from an issue
 	 *
 	 * @param string $username
@@ -101,7 +101,7 @@ class GithubIssueLabels extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/labels/'.$name, 'DELETE');
 	}
 	
-	/*
+	/**
 	 * Replace all labels for an issue
 	 *
 	 * @param string $username
@@ -113,7 +113,7 @@ class GithubIssueLabels extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/labels', 'PUT', $labels);
 	}
 	
-	/*
+	/**
 	 * Remove all labels from an issue
 	 *
 	 * @param string $username
@@ -124,7 +124,7 @@ class GithubIssueLabels extends Github {
 		return ($this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/labels', 'DELETE', array(), true) == 204) ? true : false;
 	}
 	
-	/*
+	/**
 	 * List labels on an issue
 	 *
 	 * @param string $username

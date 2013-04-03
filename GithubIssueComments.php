@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubIssueComments extends Github {
 	
-	/*
+	/**
 	 * List comments on an issue
 	 *
 	 * @param string $username
@@ -15,7 +15,7 @@ class GithubIssueComments extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$issueNr.'/comments');
 	}
 	
-	/*
+	/**
 	 * Get a single comment
 	 *
 	 * @param string $username
@@ -26,7 +26,7 @@ class GithubIssueComments extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/comments/'.$commentId);
 	}
 	
-	/*
+	/**
 	 * Create a comment
 	 *
 	 * @param string $username
@@ -39,7 +39,7 @@ class GithubIssueComments extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Edit a comment
 	 *
 	 * @param string $username
@@ -52,7 +52,7 @@ class GithubIssueComments extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Delete a comment
 	 *
 	 * @param string $username

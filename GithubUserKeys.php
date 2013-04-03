@@ -4,14 +4,14 @@ require_once('Github.php');
 
 class GithubUserKeys extends Github {
 	
-	/*
+	/**
 	 * List public keys for the current user
 	 */
 	public function listAll() {
 		return $this->request('/user/keys');
 	}
 	
-	/*
+	/**
 	 * Get a single public key
 	 *
 	 * @param int $id Key ID
@@ -20,7 +20,7 @@ class GithubUserKeys extends Github {
 		return $this->request('/user/keys/'.$id);
 	}
 	
-	/*
+	/**
 	 * Create a public key
 	 *
 	 * @param string $title
@@ -33,7 +33,7 @@ class GithubUserKeys extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Update a public key
 	 *
 	 * @param int $id Key ID
@@ -47,7 +47,7 @@ class GithubUserKeys extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Delete a public key
 	 *
 	 * @param int $id Key ID

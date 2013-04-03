@@ -2,25 +2,25 @@
 	
 class Github {
 	
-	/*
+	/**
 	 * API options
 	 */
 	private $_url = 'https://api.github.com';
 	private $_username = null;
 	private $_password = null;
 	
-	/*
+	/**
 	 * Errors
 	 */
 	private $_errors = array();
 	
-	/*
+	/**
 	 * Pagination
 	 */
 	public $page = null;
 	public $perPage = null;
 	
-	/*
+	/**
 	 * Construct with github account
 	 *
 	 * @param string $username Default: null
@@ -31,7 +31,7 @@ class Github {
 		$this->_password = $password;
 	}
 	
-	/*
+	/**
 	 * Reset the pagination options
 	 */
 	private function _resetPagination() {
@@ -39,7 +39,7 @@ class Github {
 		$this->perPage = null;
 	}
 	
-	/*
+	/**
 	 * Construct complete url
 	 *
 	 * @param string $ressource
@@ -100,7 +100,7 @@ class Github {
 		return $return;
 	}
 	
-	/*
+	/**
 	 * Add error to error list
 	 *
 	 * @param string $url Request url
@@ -120,21 +120,21 @@ class Github {
 		);
 	}
 	
-	/*
+	/**
 	 * Return all errors
 	 */
 	public function getErrors() {
 		return $this->_errors;
 	}
 	
-	/*
+	/**
 	 * Check if a error exists
 	 */
 	public function hasError() {
 		return (!empty($this->_errors));
 	}
 	
-	/*
+	/**
 	 * Exectute curl request
 	 *
 	 * @param string $ressource
@@ -206,7 +206,7 @@ class Github {
 		}
 	}
 	
-	/*
+	/**
 	 * Check rate limit. This check does not increase the limit
 	 *
 	 * @return array Remaining API calls and the limit per hour

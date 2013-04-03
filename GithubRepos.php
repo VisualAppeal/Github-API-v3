@@ -4,28 +4,28 @@ require_once('Github.php');
 
 class GithubRepos extends Github {
 	
-	/*
+	/**
 	 * List repositories for the authenticated user
 	 */
 	public function listOwn() {
 		return $this->request('/user/repos');
 	}
 	
-	/*
+	/**
 	 * List public repositories for the specified user
 	 */
 	public function listUser($username) {
 		return $this->request('/users/'.$username.'/repos');
 	}
 	
-	/*
+	/**
 	 * List repositories for the specified org
 	 */
 	public function listOrg($organization) {
 		return $this->request('/orgs/'.$organization.'/repos');
 	}
 	
-	/*
+	/**
 	 * Create a new repository for the authenticated user
 	 *
 	 * @param string $name
@@ -50,7 +50,7 @@ class GithubRepos extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Create a new repository in this organization. The authenticated user must be a member of $organization
 	 *
 	 * @param string $organization
@@ -76,7 +76,7 @@ class GithubRepos extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Create a new repository for the authenticated user
 	 *
 	 * @param string $username
@@ -103,7 +103,7 @@ class GithubRepos extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Get repository
 	 *
 	 * @param string $username
@@ -113,7 +113,7 @@ class GithubRepos extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository);
 	}
 	
-	/*
+	/**
 	 * List contributors
 	 *
 	 * @param string $username
@@ -126,7 +126,7 @@ class GithubRepos extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * List languages
 	 *
 	 * @param string $username
@@ -136,7 +136,7 @@ class GithubRepos extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/languages');
 	}
 	
-	/*
+	/**
 	 * List teams
 	 *
 	 * @param string $username
@@ -146,7 +146,7 @@ class GithubRepos extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/teams');
 	}
 	
-	/*
+	/**
 	 * List tags
 	 *
 	 * @param string $username
@@ -156,7 +156,7 @@ class GithubRepos extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/tags');
 	}
 	
-	/*
+	/**
 	 * List branches
 	 *
 	 * @param string $username

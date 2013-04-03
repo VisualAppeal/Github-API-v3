@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubOrgMembers extends Github {
 	
-	/*
+	/**
 	 * List all users who are members of an organization
 	 *
 	 * @param string $organization
@@ -13,7 +13,7 @@ class GithubOrgMembers extends Github {
 		return $this->request('/orgs/'.$organization.'/members');
 	}
 	
-	/*
+	/**
 	 * Check if the user is a member of an organization
 	 *
 	 * @param string $organization
@@ -25,7 +25,7 @@ class GithubOrgMembers extends Github {
 		return ($this->request('/orgs/'.$organization.'/members/'.$user, 'GET', array(), true) == '204') ? true : false;
 	}
 	
-	/*
+	/**
 	 * Remove a member
 	 *
 	 * @param string $organization
@@ -37,7 +37,7 @@ class GithubOrgMembers extends Github {
 		return ($this->request('/orgs/'.$organization.'/members/'.$user, 'GET', array(), true) == '204') ? true : false;
 	}
 	
-	/*
+	/**
 	 * List public members
 	 *
 	 * @param string $organization
@@ -46,7 +46,7 @@ class GithubOrgMembers extends Github {
 		return $this->request('/orgs/'.$organization.'/public_members');
 	}
 	
-	/*
+	/**
 	 * Check if a user is a public member
 	 *
 	 * @param string $organization
@@ -56,7 +56,7 @@ class GithubOrgMembers extends Github {
 		return ($this->request('/orgs/'.$organization.'/public_members/'.$user, 'GET', array(), true) == '204') ? true : false;
 	}
 	
-	/*
+	/**
 	 * Publicize a user’s membership
 	 *
 	 * @param string $organization
@@ -66,7 +66,7 @@ class GithubOrgMembers extends Github {
 		return ($this->request('/orgs/'.$organization.'/public_members/'.$user, 'PUT', array(), true) == '204') ? true : false;
 	}
 	
-	/*
+	/**
 	 * Conceal a user’s membership (Set status to private)
 	 *
 	 * @param string $organization

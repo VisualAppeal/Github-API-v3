@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubGistComments extends Github {
 	
-	/*
+	/**
 	 * List comments on a gist
 	 *
 	 * @param string $gistId Gist ID
@@ -13,7 +13,7 @@ class GithubGistComments extends Github {
 		return $this->request('/gists/'.$gistId.'/comments');
 	}
 	
-	/*
+	/**
 	 * Get a single comment
 	 *
 	 * @param string $id Comment ID
@@ -22,7 +22,7 @@ class GithubGistComments extends Github {
 		return $this->request('/gists/comments/'.$id);
 	}
 	
-	/*
+	/**
 	 * Create a comment
 	 *
 	 * @param string $gistId Gist ID
@@ -34,7 +34,7 @@ class GithubGistComments extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Edit a comment
 	 *
 	 * @param string $id Comment ID
@@ -46,7 +46,7 @@ class GithubGistComments extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Delete a comment
 	 *
 	 * @param string $id

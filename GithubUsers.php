@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubUsers extends Github {
 	
-	/*
+	/**
 	 * Get a single user
 	 *
 	 * @param string $username
@@ -13,7 +13,7 @@ class GithubUsers extends Github {
 		return $this->request('/users/'.$username);
 	}
 	
-	/*
+	/**
 	 * Get the current authenticated user
 	 *
 	 * @param string $username
@@ -22,7 +22,7 @@ class GithubUsers extends Github {
 		return $this->request('/user');
 	}
 	
-	/*
+	/**
 	 * Update the authenticated user
 	 *
 	 * @param string $name

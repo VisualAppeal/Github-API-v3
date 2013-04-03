@@ -4,14 +4,14 @@ require_once('Github.php');
 
 class GithubIssues extends Github {
 	
-	/*
+	/**
 	 * List your issues
 	 */	
 	public function listOwn() {
 		return $this->request('/issues');
 	}
 	
-	/*
+	/**
 	 *List issues for a repository
 	 *
 	 * @param string $username
@@ -21,7 +21,7 @@ class GithubIssues extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues');
 	}
 	
-	/*
+	/**
 	 * Get a single issue
 	 *
 	 * @param string $username
@@ -32,7 +32,7 @@ class GithubIssues extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/issues/'.$number);
 	}
 	
-	/*
+	/**
 	 * Create an issue
 	 *
 	 * @param string $username
@@ -54,7 +54,7 @@ class GithubIssues extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Edit an issue
 	 *
 	 * @param string $username

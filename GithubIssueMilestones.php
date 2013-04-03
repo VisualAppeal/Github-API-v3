@@ -7,7 +7,7 @@ class GithubIssueMilestones extends Github {
 	const STATE_OPEN = 'open';
 	const STATE_CLOSED = 'closed';
 	
-	/*
+	/**
 	 * List milestones for a repository
 	 *
 	 * @param string $username
@@ -17,7 +17,7 @@ class GithubIssueMilestones extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/milestones');
 	}
 	
-	/*
+	/**
 	 * Get a single milestone
 	 *
 	 * @param string $username
@@ -28,7 +28,7 @@ class GithubIssueMilestones extends Github {
 		return $this->request('/repos/'.$username.'/'.$repository.'/milestones/'.$number);
 	}
 	
-	/*
+	/**
 	 * Create a milestone
 	 *
 	 * @param string $username
@@ -47,7 +47,7 @@ class GithubIssueMilestones extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Update a milestone
 	 *
 	 * @param string $username
@@ -67,7 +67,7 @@ class GithubIssueMilestones extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Delete a milestone
 	 *
 	 * @param string $username

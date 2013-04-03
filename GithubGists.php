@@ -4,7 +4,7 @@ require_once('Github.php');
 
 class GithubGists extends Github {
 	
-	/*
+	/**
 	 * List a user’s gists:
 	 *
 	 * @param string $username
@@ -13,28 +13,28 @@ class GithubGists extends Github {
 		return $this->request('/users/'.$username.'/gists');
 	}
 	
-	/*
+	/**
 	 * List the authenticated user’s gists or if called anonymously, this will return all public gists
 	 */
 	public function listOwn() {
 		return $this->request('/gists');
 	}
 	
-	/*
+	/**
 	 * List all public gists
 	 */
 	public function listPublic() {
 		return $this->request('/gists/public');
 	}
 	
-	/*
+	/**
 	 * List the authenticated user’s starred gists
 	 */
 	public function listStarred() {
 		return $this->request('/gists/starred');
 	}
 	
-	/*
+	/**
 	 * Get a single gist
 	 *
 	 * @param string $id
@@ -43,7 +43,7 @@ class GithubGists extends Github {
 		return $this->request('/gists/'.$id);
 	}
 	
-	/*
+	/**
 	 * Create a gist
 	 *
 	 * @param boolean $public
@@ -61,7 +61,7 @@ class GithubGists extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Edit a gist
 	 *
 	 * @param string $id
@@ -86,7 +86,7 @@ class GithubGists extends Github {
 		));
 	}
 	
-	/*
+	/**
 	 * Star a gist
 	 *
 	 * @param string $id
@@ -96,7 +96,7 @@ class GithubGists extends Github {
 		return (is_null($result)) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Unstar a gist
 	 *
 	 * @param string $id
@@ -106,7 +106,7 @@ class GithubGists extends Github {
 		return (is_null($result)) ? true : false;
 	}
 	
-	/*
+	/**
 	 * Check if a gist is starred
 	 *
 	 * @param string $id
@@ -116,11 +116,11 @@ class GithubGists extends Github {
 		return (is_null($result)) ? true : false;
 	}
 	
-	/*public function fork($id) {
+	/**public function fork($id) {
 		return $this->request('/gists/'.$id.'/fork', 'POST');
 	}*/
 	
-	/*
+	/**
 	 * Delete a gist
 	 * 
 	 * @param string $id
