@@ -1,3 +1,5 @@
+[![Analytics](https://ga-beacon.appspot.com/UA-46905576-1/VisualAppeal/Github-API-v3)](https://github.com/VisualAppeal/Github-API-v3)
+
 # Github-API-v3
 
 PHP Github API client for version 3.
